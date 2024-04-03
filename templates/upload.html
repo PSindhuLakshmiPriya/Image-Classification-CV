@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('https://www.shutterstock.com/shutterstock/photos/1802388268/display_1500/stock-photo-confused-geometry-shape-of-wood-blocks-on-the-left-rearrange-in-the-same-category-on-the-right-1802388268.jpg'); /* Replace 'your_background_image_url.jpg' with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif; /* Optional: setting a font-family */
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding-top: 50px; /* Adjust as needed */
+        }
+        .upload-form {
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: setting a semi-transparent background color */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">UPLOAD IMAGE</h1>
+
+        <form class="upload-form" action="http://localhost:5000/result" method="POST" enctype="multipart/form-data">
+            <div style="text-align: center;">
+                <h2>Choose Image</h2>
+                <input type="file" name="file" />
+            </div>
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <input type="submit" value="Upload" style="border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 12px; background-color: #71ec6d; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

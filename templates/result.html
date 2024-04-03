@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification Result</title>
+    <style>
+        body {
+            background-image: url('https://www.iflexion.com/files/content/research/ai-applications.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            animation: slideBackground 20s linear infinite alternate;
+        }
+
+        @keyframes slideBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            color: white; /* Change text color to white */
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Classification Result</h1>
+        {% for prediction in result %}
+        <p>{{ prediction[1] }}: {{ prediction[2]*100 }}%</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
